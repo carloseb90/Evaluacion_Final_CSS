@@ -20,7 +20,7 @@ header{
   background: #5b7989;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 90%;
+  width: 95%;
   height: 120px;
   margin: 0 auto;
 }
@@ -30,7 +30,7 @@ h1{
   margin: 0;
 }
 h1 a{
-  margin: 10%;
+  margin: 15px;
   text-decoration: none;
   font-family: 'ShadowsIntoLight';
   color:white;
@@ -38,12 +38,11 @@ h1 a{
 }
 /*************menu************/
 nav{
-  width: 25%;
+  width: 300px;;
   margin: 15px 10px 0px 0px;
   background-color: white;
   float: right;
   border-radius: 5px;
-  position: relative;
 }
 nav ul{
   margin: 0px;
@@ -56,7 +55,7 @@ nav ul li{
   margin: 10px;
 }
 nav li a{
-  padding: 15px;
+  padding: 14px;
   text-decoration: none;
   color: #5b7989;
 }
@@ -64,4 +63,55 @@ nav li a:hover{
   background-color: #5b7989;
   color: white;
   border-radius: 10px;
+}
+@media (min-width:721px) and (max-width:960px) {
+  h1 a{
+    font-size: 0.8em;
+  }
+  nav{
+    margin: 26px 12px 0px 0px;
+  }
+  nav ul li{
+    margin: 9px 9px 9px 11px;
+  }
+  nav li a{
+    font-size: 0.9em;
+    padding: 16px;
+  }
+}
+@media (min-width:421px) and (max-width:720px) {
+  h1 a{
+    font-size: 0.7em;
+  }
+  nav{
+    margin: 28px 12px 0px 0px;
+  }
+  nav ul li{
+    margin: 9px 9px 9px 11px;
+  }
+  nav li a{
+    font-size: 0.8em;
+    padding: 16px;
+  }
+}
+@media (max-width:420px) {
+  header{
+    width: 100%;
+  }
+  h1 a{
+    font-size: 5vw;
+  }
+  nav{
+    float: none;
+    width:65%;
+    margin: 30px auto;
+  }
+  nav ul li{
+    margin: 9px 9px 9px 11px;
+  }
+  nav li a{
+    font-size: 3vw;
+    padding: 3vw;
+  }
+  }
 }

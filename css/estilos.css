@@ -11,16 +11,21 @@
   src: url(../fuentes/ShadowsIntoLight.ttf);
 }
 body{
-  font-family: helvetica, sans-serif;
+  font-family: 'DancingScript-Bold', sans-serif;
   font-size: 1em;
   margin: 0;
   padding: 0;
+  background: #02010a;
 }
+#contenedor{
+  width: 900px;
+  margin: 0 auto;
+}
+/***********header*************/
 header{
   background: #5b7989;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 95%;
   height: 120px;
   margin: 0 auto;
 }
@@ -40,7 +45,6 @@ h1 a{
 nav{
   width: 300px;;
   margin: 15px 10px 0px 0px;
-  background-color: white;
   float: right;
   border-radius: 5px;
 }
@@ -52,50 +56,86 @@ nav ul{
 }
 nav ul li{
   display:block;
-  margin: 10px;
+  margin: 10px 10px 10px 18px;
 }
 nav li a{
   padding: 14px;
   text-decoration: none;
-  color: #5b7989;
+  color: #fff;
 }
+
 nav li a:hover{
-  background-color: #5b7989;
-  color: white;
+  background-color: #fff;
+  color: #5b7989;
   border-radius: 10px;
 }
-@media (min-width:721px) and (max-width:960px) {
+/*************section************/
+section{
+  display: block;
+  margin: 0px;
+}
+/*********imagen central*********/
+section #imagen_central{
+  background-color: #82c3a6;
+}
+#imagen_central img{
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/******imagenes secundarias*****/
+section #imagen_secundaria{
+  background-color: #d5c75f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#imagen_secundaria img{
+  width: 400px;
+  height: 250px;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+/***********adaptacion********/
+@media (min-width:721px) and (max-width:900px) {
+  #contenedor{
+    width: 100%;
+  }
   h1 a{
-    font-size: 0.8em;
+    font-size: 0.95em;
   }
   nav{
-    margin: 26px 12px 0px 0px;
+    margin: 17px 12px 0px 0px;
   }
   nav ul li{
-    margin: 9px 9px 9px 11px;
+    margin: 10px 10px 10px 17px;
+  }
+  nav li a{
+    padding: 15px;
+  }
+  picture img
+}
+@media (min-width:421px) and (max-width:720px) {
+  #contenedor{
+    width: 100%;
+  }
+  h1 a{
+    font-size: 0.85em;
+  }
+  nav{
+    margin: 25px 12px 0px 0px;
+  }
+  nav ul li{
+    margin: 9px 9px 9px 20px;
   }
   nav li a{
     font-size: 0.9em;
     padding: 16px;
   }
 }
-@media (min-width:421px) and (max-width:720px) {
-  h1 a{
-    font-size: 0.7em;
-  }
-  nav{
-    margin: 28px 12px 0px 0px;
-  }
-  nav ul li{
-    margin: 9px 9px 9px 11px;
-  }
-  nav li a{
-    font-size: 0.8em;
-    padding: 16px;
-  }
-}
 @media (max-width:420px) {
-  header{
+  #contenedor{
     width: 100%;
   }
   h1 a{
@@ -107,11 +147,20 @@ nav li a:hover{
     margin: 30px auto;
   }
   nav ul li{
-    margin: 9px 9px 9px 11px;
+    margin: 5px 9px 10px 17px;
   }
   nav li a{
     font-size: 3vw;
-    padding: 3vw;
+    padding: 2vh;
   }
+  #imagen_central img{
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+  }
+  #imagen_secundaria img{
+    width: 100%;
+    margin: 0;
+    padding: 0px;
   }
 }

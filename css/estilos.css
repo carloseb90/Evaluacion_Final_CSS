@@ -27,14 +27,13 @@ header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 120px;
-  margin: 0 auto;
 }
 /*************Titulo***********/
-h1{
+header h1{
   width: 100%;
   margin: 0;
 }
-h1 a{
+header h1 a{
   margin: 15px;
   text-decoration: none;
   font-family: 'ShadowsIntoLight';
@@ -71,7 +70,6 @@ nav li a:hover{
 }
 /*************section************/
 section{
-  display: block;
   margin: 0px;
 }
 /*********imagen central*********/
@@ -91,18 +89,51 @@ section #imagen_secundaria{
   flex-direction: row;
   flex-wrap: wrap;
 }
-#imagen_secundaria img{
+#imagen_secundaria a{
+  margin: 20px auto;
+  padding: 0px;
+}
+#imagen_secundaria a img{
   width: 400px;
   height: 250px;
-  margin: 20px auto;
   border: 1px solid black;
+}
+/*******footer********/
+footer{
+  width: 100%;
+  float: left;
+  clear: both;
+  background-color: #C6d5c5;
+}
+footer .pie{
+  margin: 3px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+footer .pie aside{
+  margin: 3px auto;
+  padding: 5px;
+  width: 180px;
+}
+section aside >h2, h3, p{
+  margin: 0px;
+  color: black;
+}
+section aside > p{
+  font-size: 0.95em;
+}
+.bloque3 p > a{
+  text-decoration: none;
+  color: black;
 }
 /***********adaptacion********/
 @media (min-width:721px) and (max-width:900px) {
   #contenedor{
     width: 100%;
   }
-  h1 a{
+  header h1 a{
     font-size: 0.95em;
   }
   nav{
@@ -120,7 +151,7 @@ section #imagen_secundaria{
   #contenedor{
     width: 100%;
   }
-  h1 a{
+  header h1 a{
     font-size: 0.85em;
   }
   nav{
@@ -138,7 +169,7 @@ section #imagen_secundaria{
   #contenedor{
     width: 100%;
   }
-  h1 a{
+  header h1 a{
     font-size: 5vw;
   }
   nav{
@@ -158,9 +189,13 @@ section #imagen_secundaria{
     margin: 0;
     padding: 0px;
   }
-  #imagen_secundaria img{
+  #imagen_secundaria a{
+    margin: 0;
+    padding: 0;
+  }
+  #imagen_secundaria a img{
     width: 100%;
     margin: 0;
-    padding: 0px;
+    padding: 0;
   }
 }

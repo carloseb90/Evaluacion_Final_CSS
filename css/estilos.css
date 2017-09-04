@@ -68,6 +68,7 @@ nav li a:hover{
   color: #5b7989;
   border-radius: 10px;
 }
+/***************index***********/
 /*************section************/
 section{
   margin: 0px;
@@ -84,13 +85,14 @@ section #imagen_central{
 }
 /******imagenes secundarias*****/
 section #imagen_secundaria{
+  height: 350px;
   background-color: #d5c75f;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 #imagen_secundaria a{
-  margin: 20px auto;
+  margin: 45px auto;
   padding: 0px;
 }
 #imagen_secundaria a img{
@@ -98,12 +100,63 @@ section #imagen_secundaria{
   height: 250px;
   border: 1px solid black;
 }
+/********rotacion**********/
+#imagen_secundaria a img[src$="imagen3.jpg"]{
+  transition: 1s;
+}
+#imagen_secundaria a img[src$="imagen3.jpg"]:hover{
+  transform: rotate(10deg);
+}
+/*********traslacion*********/
+#imagen_secundaria a img[src$="imagen2.jpg"]{
+  transition: 2s;
+}
+#imagen_secundaria a img[src$="imagen2.jpg"]:hover{
+  transform: translate(5px,-20px);
+  box-shadow: 2px 2px 4px #82c3a6;
+  -moz-box-shadow: 2px 2px 4px #82c3a6;
+  -webkit-box-shadow: 2px 2px 4px #82c3a6;
+  border: 2px solid black;
+}
+/**********paisajes**********/
+#imagenes_paisajes{
+  width: 100%;
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: wrap row;
+}
+#imagenes_paisajes aside{
+  margin: 0 auto;
+  padding: 5px;
+}
+#imagenes_paisajes aside img{
+  margin: 10px;
+  width: 250px;
+  height: 140px;
+}
+#imagenes_paisajes aside img[src$="img1.jpg"]{
+  -webkit-filter:blur(10px);
+  -moz-filter:blur(10px);
+  filter: blur(10px);
+}
+#imagenes_paisajes aside > .pares{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter:grayscale(100%);
+}
+#imagenes_paisajes aside img[src$="img3.jpg"]{
+  -webkit-filter: sepia(90%);
+  -moz-filter: sepia(90%);
+  filter: sepia(90%);
+}
 /*******footer********/
 footer{
   width: 100%;
   float: left;
   clear: both;
   background-color: #C6d5c5;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 footer .pie{
   margin: 3px;
@@ -145,7 +198,9 @@ section aside > p{
   nav li a{
     padding: 15px;
   }
-  picture img
+  section #imagen_secundaria{
+    height: auto;
+  }
 }
 @media (min-width:421px) and (max-width:720px) {
   #contenedor{
@@ -197,5 +252,11 @@ section aside > p{
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+  /*********paisajes*********/
+  #imagenes_paisajes aside img{
+    margin: 1px;
+    width: 100%;
+    height: auto;
   }
 }

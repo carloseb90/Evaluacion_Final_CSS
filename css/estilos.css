@@ -149,6 +149,37 @@ section #imagen_secundaria{
   -moz-filter: sepia(90%);
   filter: sepia(90%);
 }
+/*******Retratos*******/
+#imagenes_retratos{
+  width: 100%;
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: wrap row;
+}
+#imagenes_retratos aside{
+  margin: 0 auto;
+  padding: 4px;
+}
+#imagenes_retratos aside img{
+  margin: 10px;
+  width: 250px;
+  height: 140px;
+}
+#imagenes_retratos aside img[src$="imagen3.jpg"]{
+  -webkit-filter:blur(10px);
+  -moz-filter:blur(10px);
+  filter: blur(10px);
+}
+#imagenes_retratos aside > .pares{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter:grayscale(100%);
+}
+#imagenes_retratos aside img[src$="imagen2.jpg"]{
+  -webkit-filter: sepia(90%);
+  -moz-filter: sepia(90%);
+  filter: sepia(90%);
+}
 /*******footer********/
 footer{
   width: 100%;
@@ -170,11 +201,11 @@ footer .pie aside{
   padding: 5px;
   width: 180px;
 }
-section aside >h2, h3, p{
+footer section aside >h2, h3, p{
   margin: 0px;
   color: black;
 }
-section aside > p{
+footer section aside > p{
   font-size: 0.95em;
 }
 .bloque3 p > a{
@@ -255,6 +286,11 @@ section aside > p{
   }
   /*********paisajes*********/
   #imagenes_paisajes aside img{
+    margin: 1px;
+    width: 100%;
+    height: auto;
+  }
+  #imagenes_retratos aside img{
     margin: 1px;
     width: 100%;
     height: auto;
